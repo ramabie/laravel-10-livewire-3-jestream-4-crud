@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire;
+namespace App\Livewire\Customer;
 
 use App\Livewire\Forms\CustomerForm;
 use Livewire\Component;
@@ -26,6 +26,6 @@ class CustomerCreate extends Component
 
     public function render()
     {
-        return view('livewire.customer-create');
+        return view('livewire.customer.customer-create');
     }
 }

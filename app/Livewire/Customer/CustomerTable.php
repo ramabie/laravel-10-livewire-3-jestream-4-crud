@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire;
+namespace App\Livewire\Customer;
 
 use App\Livewire\Forms\CustomerForm;
 use App\Models\Customer;
@@ -26,7 +26,7 @@ class CustomerTable extends Component
     #[On('dispatch-customer-delete-del')]
     public function render()
     {
-        return view('livewire.customer-table', [
+        return view('livewire.customer.customer-table', [
             'data' => Customer::where('id', 'like', '%'.$this->form->id.'%')
                 ->where('name', 'like', '%'.$this->form->name.'%')
                 ->where('email', 'like', '%'.$this->form->email.'%')

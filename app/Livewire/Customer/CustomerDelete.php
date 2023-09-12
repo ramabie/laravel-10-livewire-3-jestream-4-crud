@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire;
+namespace App\Livewire\Customer;
 
 use App\Models\Customer;
 use Livewire\Attributes\Locked;
@@ -41,6 +41,6 @@ class CustomerDelete extends Component
 
     public function render()
     {
-        return view('livewire.customer-delete');
+        return view('livewire.customer.customer-delete');
     }
 }

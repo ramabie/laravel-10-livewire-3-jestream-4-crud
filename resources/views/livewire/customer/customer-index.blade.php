@@ -11,13 +11,13 @@
 
                 <h1 class="text-3xl mb-5">Customer</h1>
                 
-                <livewire:customer-create />
+                <livewire:customer.customer-create />
 
-                <livewire:customer-edit />
+                <livewire:customer.customer-edit />
                 
-                <livewire:customer-delete />
+                <livewire:customer.customer-delete />
 
-                <livewire:customer-table />
+                <livewire:customer.customer-table />
 
             </div>
         </div>
