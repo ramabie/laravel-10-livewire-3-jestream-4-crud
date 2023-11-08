@@ -14,7 +14,7 @@
         </div>
     </div>
 
-    <div class="flex flex-row justify-end px-6 py-4 bg-gray-100 text-right">
+    <div class="flex flex-row rounded-b-lg justify-end px-6 py-4 bg-gray-100 text-right">
         {{ $footer }}
     </div>
 

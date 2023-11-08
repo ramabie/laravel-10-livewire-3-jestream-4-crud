@@ -1,6 +1,10 @@
 <?php
 
 use App\Livewire\Customer\CustomerIndex;
+use App\Livewire\Reward\RewardIndex;
+use App\Livewire\Select2\Select2Index;
+use App\Livewire\Select2\Select2Multiple;
+use App\Livewire\Service\ServiceIndex;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,5 +32,12 @@ Route::middleware([
     })->name('dashboard');
 
     Route::get('/customer', CustomerIndex::class)->name('customer.index');
+
+    // Route::get('/reward', RewardIndex::class)->name('reward.index');
+
+    Route::get('/select2', Select2Index::class)->name('select2.index');
+    // Route::get('/select2', Select2Multiple::class)->name('select2.index');
+
+    Route::get('/service', ServiceIndex::class)->name('service.index');
     
 });

@@ -21,6 +21,9 @@ class CustomerForm extends Form
     #[Rule('required|min:3', as: 'Address')]
     public $address;
 
+    #[Rule('required|array')]
+    public $hobbies;
+
     public function setCustomer(Customer $customer)
     {
         $this->customer = $customer;
@@ -28,6 +31,7 @@ class CustomerForm extends Form
         $this->name = $customer->name;
         $this->email = $customer->email;
         $this->address = $customer->address;
+        $this->hobbies = $customer->hobbies;
     }
 
     public function store()

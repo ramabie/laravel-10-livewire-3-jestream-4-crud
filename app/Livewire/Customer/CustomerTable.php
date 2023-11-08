@@ -21,6 +21,19 @@ class CustomerTable extends Component
         $sortBy = 'customers.id',
         $sortDirection = 'desc';
 
+    public function confirmDelete($get_id)
+    {
+        try {
+
+            Customer::destroy($get_id);
+
+        } catch (\Exception $e) {
+
+            $this->dispatch('sweet-alert', icon: 'error', title: 'data gagal disimpan');
+            
+        }
+    }
+
     #[On('dispatch-customer-create-save')]
     #[On('dispatch-customer-create-edit')]
     #[On('dispatch-customer-delete-del')]
@@ -31,6 +44,7 @@ class CustomerTable extends Component
                 ->where('name', 'like', '%'.$this->form->name.'%')
                 ->where('email', 'like', '%'.$this->form->email.'%')
                 ->where('address', 'like', '%'.$this->form->address.'%')
+                ->where('hobbies', 'like', '%'.$this->form->hobbies.'%')
                 ->orderBy($this->sortBy, $this->sortDirection)
                 ->paginate($this->paginate),
         ]);

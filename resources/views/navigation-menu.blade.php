@@ -18,6 +18,19 @@
                     <x-nav-link href="{{ route('customer.index') }}" wire:navigate :active="request()->routeIs('customer.index')">
                         {{ __('Customer') }}
                     </x-nav-link>
+{{--  
+                    <x-nav-link href="{{ route('reward.index') }}" wire:navigate :active="request()->routeIs('reward.index')">
+                        {{ __('Reward') }}
+                    </x-nav-link>
+ --}}
+                    <x-nav-link href="{{ route('service.index') }}" wire:navigate :active="request()->routeIs('service.index')">
+                        {{ __('Service') }}
+                    </x-nav-link>
+{{--                    
+                    <x-nav-link href="{{ route('select2.index') }}" wire:navigate :active="request()->routeIs('select2.index')">
+                        {{ __('Select 2') }}
+                    </x-nav-link>
+--}}
                 </div>
             </div>
 
@@ -148,6 +161,15 @@
             <x-responsive-nav-link href="{{ route('customer.index') }}" wire:navigate :active="request()->routeIs('customer.index')">
                 {{ __('Customer') }}
             </x-responsive-nav-link>
+            {{--  
+            <x-responsive-nav-link href="{{ route('reward.index') }}" wire:navigate :active="request()->routeIs('reward.index')">
+                {{ __('Reward') }}
+            </x-responsive-nav-link>
+            --}}
+            <x-responsive-nav-link href="{{ route('service.index') }}" wire:navigate :active="request()->routeIs('service.index')">
+                {{ __('Service') }}
+            </x-responsive-nav-link>
+            
         </div>
 
         <!-- Responsive Settings Options -->

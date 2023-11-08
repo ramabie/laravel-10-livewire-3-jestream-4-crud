@@ -28,6 +28,33 @@
                     <x-input-error for="form.address" class="mt-1" />
                 </div>
 
+                <div class="col-span-12">
+                    <x-label for="form.hobbies" value="Hobbies" />
+                    <x-tom
+                        x-init="$el.hobbies = new Tom($el, {
+                            sortField: {
+                                field: 'hobbies',
+                                direction: 'asc'
+                            },
+                            valueField: 'hobbies',
+                            labelField: 'hobbies',
+                            searchField: 'hobbies'
+                        })"
+                        @set-hobbies-edit.window="
+                            $el.hobbies.addOptions(event.detail.data)
+                            $el.hobbies.addItems(event.detail.data)
+                        "
+                        wire:model="form.hobbies"
+                        id="form.hobbies" multiple class="mt-1 w-full"
+                    >
+                        <option></option>
+                        @foreach(\App\Helpers\HobbiesHelper::list() as $hobby)
+                            <option>{{ $hobby }}</option>
+                        @endforeach
+                    </x-tom>
+                    <x-input-error for="form.hobbies" class="mt-1" />
+                </div>
+
             </div>
         </x-slot>
 
